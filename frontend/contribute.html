@@ -54,20 +54,31 @@
       if (name || email) user = { name, email };
     }
 
-    // 3️⃣ Render single card
-    box.innerHTML = "";
-     if (user && (user.name || user.email)) {
-     const card = document.createElement("article");
-     card.className = "faq-card";
-     card.innerHTML = `
-      <h3>${user.name || "Unnamed"}</h3>
-     ${user.email ? `<p><a class="email-link" href="mailto:${user.email}">${user.email}</a></p>` : ""}
-      `;
-     box.appendChild(card);
-      } else {
-      empty.style.display = "block";
-      empty.textContent = "You are not logged in. Please log in to contribute to our website.";
-      }}
+    // 3️⃣ Render single card after fixing the issue :Username not displayed on Contributors page #6
+
+box.innerHTML = "";
+if (user && (user.name || user.email)) {
+  const card = document.createElement("article");
+  card.className = "faq-card";
+
+  // ✅ Choose a nice display name:
+  // 1) use full name if available
+  // 2) otherwise use email prefix before '@'
+  // 3) otherwise fall back to "Unnamed"
+  let displayName = (user.name && user.name.trim() !== "")
+    ? user.name
+    : (user.email ? user.email.split("@")[0] : "Unnamed");
+
+  card.innerHTML = `
+    <h3>${displayName}</h3>
+    ${user.email ? `<p><a class="email-link" href="mailto:${user.email}">${user.email}</a></p>` : ""}
+  `;
+  box.appendChild(card);
+} else {
+  empty.style.display = "block";
+  empty.textContent = "You are not logged in. Please log in to contribute to our website.";
+}
+  }
 
   document.addEventListener("DOMContentLoaded", loadCurrentUser);
 })();
