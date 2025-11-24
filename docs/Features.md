@@ -11,7 +11,7 @@ It is designed to be beginner-friendly, lightweight, and open for public contrib
 
 ---
 
-## ✨ Current Features
+
 
 ### 🧭 For Users
 - **Homepage**
