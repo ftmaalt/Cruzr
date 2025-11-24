@@ -358,17 +358,35 @@
             box-shadow: 0 4px 14px rgba(0,0,0,0.06);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-align: center;
+            overflow: hidden; /* contain any image/content so it doesn't overflow the card */
         }
         #demo .shot:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(2,132,199,0.15);
         }
+        /* placeholder area: keep fixed height but ensure contained image fills it without overflow */
         #demo .ph {
             height: 220px;
             background: rgba(255,255,255,0.08);
             border-bottom: 1px solid var(--accent-color);
             border-top-left-radius: var(--border-radius);
             border-top-right-radius: var(--border-radius);
+            overflow: hidden;
+            display: block;
+            padding: 0;
+        }
+        /* ensure images inside the placeholder cover the area without stretching layout */
+        #demo .ph img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        /* generic shot images (if used outside .ph) should scale down responsively */
+        #demo .shot img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
         #demo figcaption {
             padding: 12px;
