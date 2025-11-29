@@ -150,8 +150,21 @@ body.darkmode .step-card{ background: rgba(7,18,41,.4); }
 }
 
 /* Chat bubble (kept) */
-.chat-bubble{ position:fixed; bottom:24px; right:24px; width:56px; height:56px; border-radius:50%;
-  background: linear-gradient(135deg, var(--accent-color), #0EA5E9); color:#fff; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 18px 32px rgba(2,132,199,.32); z-index:1001; }
+.chat-bubble {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-color), #0EA5E9);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 32px rgba(2,132,199,.32);
+  z-index: 1001;
+}
 
 /* Responsive tweaks */
 @media (max-width:1100px){ .search-bar{ grid-template-columns: repeat(2, minmax(180px, 1fr)); } }

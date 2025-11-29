@@ -1,4 +1,5 @@
 const BASE_API_URL = "http://localhost:5000";
+
 document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
 
@@ -254,6 +255,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const isDark = !document.body.classList.contains("darkmode");
     applyTheme(isDark ? "dark" : "light");
     localStorage.setItem("cruzr-theme", isDark ? "dark" : "light");
+  });
+
+  // Support button functionality
+  const chatBubbleButton = document.querySelector(".chat-bubble");
+  chatBubbleButton.addEventListener("click", () => {
+    window.location.href = 'help.html'; // Navigates to the help page
   });
 
   filterVehicles();
