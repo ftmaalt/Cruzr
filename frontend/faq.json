@@ -64,17 +64,17 @@
       "answer": "Yes, you can extend your rental through the app. Go to 'Active Rentals', select your booking, and choose 'Extend Rental'. Extensions are subject to vehicle availability."
     },
     {
-      "category": "Payment",
+      "category": "Payments",
       "question": "Which payment methods are accepted?",
       "answer": "Cruzr accepts Apple Pay, Credit Card, Cash on Pick-up, and Benefit payment services."
     },
     {
-      "category": "Payment",
+      "category": "Payments",
       "question": "When am I charged for my reservation?",
       "answer": "For Credit Card and Apple Pay bookings, a hold is placed at the time of reservation. The final charge occurs at pick-up. For Cash on Pick-up, payment is collected when you receive the vehicle."
     },
     {
-      "category": "Payment",
+      "category": "Payments",
       "question": "What happens if I return the car late?",
       "answer": "Late returns are charged at an hourly rate of the daily price. Returns more than 3 hours late are charged a full additional day."
     },
